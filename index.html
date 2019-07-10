@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Food + Beer Pairings</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <h1>Food+Beer</h1>
+
+      <p>Wondering what beer would go well with your meal?</p>
+      <p>Just enter in what foods you're eating to find a recommended beer pairing.</p>    
+
+      <form id="form">
+        <div class="form-group">
+          <label for="food-input">Enter foods</label>
+          <input type="text" class="form-control form-control-sm" id="food-input" placeholder="What are you eating?">
+        </div>
+            
+        <button type="submit" class="btn btn-primary">Find my beer!</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3" id="output">
+      Output here
+    </div>
+  </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
