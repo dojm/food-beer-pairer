@@ -11,24 +11,29 @@ const getBeer = (e) => {
   )
   .then(
     data => {
-      console.log(data);
       let output = '';
-      let foodList = '';
+      console.log(data);
+
+      // food pairing array nested within 
+
       data.map((beer) => {
-        beer.food_pairing.map(food => {
-          foodList += `<li>${food}</li>`;
-        });
+       
         output += `
           <ul>
             <li><img src="${beer.image_url}"></li>
             <li>${beer.name}</li>
             <li>ABV: ${beer.abv}</li>
             <li>This beer is great with:
-              <ul>${foodList}</ul>
+              <ul class="food-list">
+                <li>${beer.food_pairing[0]}</li>
+                <li>${beer.food_pairing[1]}</li>
+                <li>${beer.food_pairing[2]}</li>
+              </ul>
             </li>
           </ul>
         `;
       });
+
       document.getElementById('output').innerHTML = output;
     }
   )

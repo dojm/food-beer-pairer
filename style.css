@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  color: #5d5d5a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ff7657;
+}
+
+.container {
+  padding: 30px;
+}
+
 .row {
   margin-bottom: 20px;
 }
@@ -6,6 +21,24 @@ img {
   height: 200px;
 }
 
+label {
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  background: #ff7657;
+  border: 1px solid #ff7657;
+}
+
+.btn-primary:hover {
+  background: #ffba5a;
+  border: 1px solid #ffba5a;
+}
+
+.btn-primary:active {
+  background: #ffba5a !important;
+  border: 1px solid #ffba5a;
+}
 
 #output {
   display: grid;
@@ -14,7 +47,8 @@ img {
 }
 
 #output > ul {
-  border: 1px solid black;
+  /* border: 1px solid #ffba5a; */
+  background: linear-gradient(180deg, #ffe3bc, #fcf9ed);
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -23,15 +57,23 @@ img {
   list-style: none;
 }
 
+/* beer name */
+
 #output > ul > li:nth-child(2) {
-  font-size: 1.75rem;
+  font-size: 1.65rem;
+  margin-top: 20px;
+  color: #ff7657;
 }
 
+/* margin after ABV */
 #output > ul > li:nth-child(3) {
   margin-bottom: 30px;
 }
 
-ul li ul {
+.food-list {
   list-style-position: inside;
-  padding: 0;
+  padding: 0; 
+  margin-top: 8px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
 }
